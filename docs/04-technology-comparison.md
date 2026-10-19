@@ -1,6 +1,10 @@
 # Technology comparison for AITU Smart Schedule
 
-Project: Development of a Web Platform for Planning Academic Streams with a Module for Selecting Courses, Instructors, and Booking Classrooms (working name: AITU Smart Schedule). Team: Aizada Sembayeva, Aiya Zhakupova. Supervisor: Nadirov Nurtas.
+Project: Development of a Web Platform for Planning Academic Streams with a Module for Selecting Courses, Instructors, and Booking Classrooms (working name: AITU Smart Schedule). 
+
+Team: Aizada Sembayeva, Aiya Zhakupova. 
+
+Supervisor: Nadirov Nurtas.
 
 This document compares alternatives for six stack decisions and justifies each choice against the requirements in [docs/05-requirements.md](05-requirements.md). The result is Go 1.27, PostgreSQL 18 (16 as the minimum), River for background jobs, Server-Sent Events opened through `fetch` with a polling fallback, the team's own solver with OR-Tools CP-SAT as an offline baseline, and React for the frontend.
 
@@ -13,7 +17,7 @@ This document compares alternatives for six stack decisions and justifies each c
 | 3 | Background jobs | River (queue inside PostgreSQL) | Redis + Asynq | Job enqueued in the same transaction as the run record (FR-SCH-02, NFR-REL-01) |
 | 4 | Real-time updates | Server-Sent Events, with polling as fallback | WebSocket | One-way server push of progress and seat counts (FR-SCH-03, FR-ENR-08) |
 | 5 | Solver | Own two-phase solver in Go; OR-Tools CP-SAT as offline baseline only | OR-Tools CP-SAT inside the product | Minimal conflict explanation and own algorithmic contribution (FR-SCH-06, proposal objectives 4-5) |
-| 6 | Frontend | React + TypeScript + Vite | Vue 3 + TypeScript | Runtime switching between kk/ru/en (NFR-USE-01) and available libraries; team familiarity to be confirmed by Aiya |
+| 6 | Frontend | React + TypeScript + Vite | Vue 3 + TypeScript | |
 
 ## 1. Method
 
@@ -54,7 +58,7 @@ The drivers below collect the requirements that discriminate between technologie
 | D7. Server-to-client push | Generation progress and live seat counters reach the browser without a reload | FR-SCH-03, FR-ENR-08 |
 | D8. Relational integrity | Program → cohort → course → stream → session links with foreign keys and checks | FR-CAT-06, FR-CAT-07, FR-CAT-08 |
 | D9. Small operational footprint | `docker compose up` starts the whole system for a two-person team and the defense committee | NFR-DEP-01 |
-| D10. Frontend needs | kk/ru/en with runtime switching, layout from 360 px, weekly grid, SVG floor map, TypeScript client generated from OpenAPI | NFR-USE-01, NFR-USE-02, FR-BOOK-01, FR-SCH-08, FR-X-03 |
+| D10. Frontend needs | layout from 360 px, weekly grid, SVG floor map, TypeScript client generated from OpenAPI | NFR-USE-02, FR-BOOK-01, FR-SCH-08, FR-X-03 |
 | D11. Testability against a real database | Concurrency tests run against real PostgreSQL in a container with the race detector on | NFR-MNT-01 |
 
 ## 3. Decisions
@@ -166,7 +170,6 @@ Requirements discriminate less here than in the other decisions. All three frame
 | Criterion | Type | React + TS + Vite | Vue 3 + TS + Vite | Angular |
 |---|---|---|---|---|
 | TypeScript client generated from OpenAPI 3.1 | K (FR-X-03) | ● openapi-typescript (framework-independent) | ● same | ● same, or openapi-generator |
-| kk/ru/en with switching at runtime and plural rules | K (NFR-USE-01) | ● i18next / react-i18next | ● vue-i18n | ◐ built-in `@angular/localize` produces one build per locale and needs a reload to switch [17]; runtime switching needs Transloco or ngx-translate |
 | Weekly grid | W (FR-SCH-08, FR-ENR-09) | ● FullCalendar React connector | ● FullCalendar Vue connector | ● FullCalendar Angular connector |
 | SVG floor map with per-room status and zoom on phones | W (FR-BOOK-01, NFR-USE-02) | ● inline SVG + react-zoom-pan-pinch | ● inline SVG + a framework-independent pan-zoom library | ● same |
 | Responsive component library | W (NFR-USE-02) | ● Mantine | ● PrimeVue or Vuetify | ● Angular Material |

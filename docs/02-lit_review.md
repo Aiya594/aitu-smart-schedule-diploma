@@ -1,6 +1,10 @@
 # Literature review for AITU Smart Schedule
 
-Project: Development of a Web Platform for Planning Academic Streams with a Module for Selecting Courses, Instructors, and Booking Classrooms (working name: AITU Smart Schedule). Team: Aizada Sembayeva, Aiya Zhakupova. Supervisor: Nadirov Nurtas.
+Project: Development of a Web Platform for Planning Academic Streams with a Module for Selecting Courses, Instructors, and Booking Classrooms (working name: AITU Smart Schedule). 
+
+Team: Aizada Sembayeva, Aiya Zhakupova. 
+
+Supervisor: Nadirov Nurtas.
 
 ## 1. Introduction
 
