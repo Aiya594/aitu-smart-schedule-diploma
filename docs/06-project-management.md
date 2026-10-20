@@ -60,7 +60,7 @@ Pre-defense 1 is on 24.10.2026. The dates of pre-defense 2, the final pre-defens
 
 | Milestone | Department date | Ready by | What is shown | Status |
 |---|---|---|---|---|
-| Pre-defense 1 | 24.10.2026 | 23.10.2026 | Repository and YouTrack set up; proposal; literature review; existing-systems comparison; technology comparison; requirements specification; questionnaire for scheduling staff; this document | Done |
+| Pre-defense 1 | 24.10.2026 | 23.10.2026 | Repository and YouTrack set up; proposal; literature review; existing-systems comparison; technology comparison; requirements specification; questionnaire for scheduling staff; this document; architecture and diagrams; UX mock-ups and API examples; verification and evaluation plan; supervisor feedback | Done |
 
 ### 2.2 Development checkpoints
 
@@ -130,5 +130,9 @@ Risk overview by score:
 | Technology comparison | [docs/04-technology-comparison.md](04-technology-comparison.md) |
 | Requirements specification | [docs/05-requirements.md](05-requirements.md) |
 | Project management and risks | docs/06-project-management.md  |
+| Architecture and diagrams | [docs/07-architecture.md](07-architecture.md) |
+| UX prototype and API examples | [docs/08-ux-prototype.md](08-ux-prototype.md), mock-ups in [Figma](https://www.figma.com/design/wPqTQwWE7WJQ4iXm5mzazp) (HTML fallback in [prototype/](../prototype/index.html)) |
+| Verification and evaluation plan | [docs/09-verification-plan.md](09-verification-plan.md) |
+| Diagram sources | [diagrams/src/](../diagrams/src/) |
 | Questionnaire for scheduling staff | [docs/questionnaire/questions.md](questionnaire/questions.md) |
 
