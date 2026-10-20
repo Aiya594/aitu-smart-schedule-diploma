@@ -128,7 +128,7 @@ Risk overview by score:
 | Requirements specification | [docs/05-requirements.md](05-requirements.md) |
 | Project management and risks | docs/06-project-management.md  |
 | Architecture and diagrams | [docs/07-architecture.md](07-architecture.md) |
-| UX prototype and API examples | [docs/08-ux-prototype.md](08-ux-prototype.md), mock-ups in [Figma](https://www.figma.com/design/wPqTQwWE7WJQ4iXm5mzazp) (HTML fallback in [prototype/](../prototype/index.html)) |
+| UX prototype and API examples | [docs/08-ux-prototype.md](08-ux-prototype.md), mock-ups in [Figma](https://www.figma.com/design/wPqTQwWE7WJQ4iXm5mzazp) |
 | Verification and evaluation plan | [docs/09-verification-plan.md](09-verification-plan.md) |
 | Diagram sources | [docs/diagrams/src/](diagrams/src/) |
 | Questionnaire for scheduling staff | [docs/questionnaire/questions.md](questionnaire/questions.md) |

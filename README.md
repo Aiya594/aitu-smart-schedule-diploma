@@ -15,6 +15,12 @@ AITU Smart Schedule is a diploma project at Astana IT University. It is a web pl
 
 ### Supervisor: Nadirov Nurtas.
 
+## Key links
+
+#### GitHub Repository: [AITU SmartSchedule](https://github.com/Aiya594/aitu-smart-schedule-diploma)
+#### YouTrack: [YouTrack project SS](https://smartschedule.youtrack.cloud/issues/SS)
+#### Figma: [SmartSchedule UX Prototype (Draft)](https://www.figma.com/design/wPqTQwWE7WJQ4iXm5mzazp)
+
 ## Problem
 
 University timetabling has to consider classes, instructors, student groups, rooms and time limits together. Preparing a timetable takes a lot of time and often still needs manual corrections when rules or preferences conflict, which leads to overlapping classes, poor room use and inconvenient schedules. The problem is NP-hard, constraints differ between institutions, and first-come-first-served stream enrollment must stay correct when many students try to take the last seats at once ([proposal §4](docs/01-proposal.md)).
@@ -64,6 +70,11 @@ Each choice and the alternatives considered are in the [technology comparison](d
 | 04 | [Technology comparison](docs/04-technology-comparison.md) | Six stack decisions with alternatives, criteria derived from requirements |
 | 05 | [Requirements specification](docs/05-requirements.md) | Functional requirements for 7 modules with MoSCoW priorities and acceptance criteria; measurable non-functional requirements |
 | 06 | [Project management and risks](docs/06-project-management.md) | Roles, milestones, risks, dependencies |
+| 07 | [Architecture and diagrams](docs/07-architecture.md) | System context, use case and component diagrams, data model draft, key runtime scenarios, consistency check |
+| 08 | [UX prototype and API examples](docs/08-ux-prototype.md) | Six key user scenarios with mock-ups in [Figma](https://www.figma.com/design/wPqTQwWE7WJQ4iXm5mzazp); API, infeasibility report and `solverctl` examples |
+| 09 | [Verification and evaluation plan](docs/09-verification-plan.md) | Test levels, test data, metrics, measurement conditions, baselines (CP-SAT, ITC-2007, ablation), experiments E1-E7 |
+| 11 | [Supervisor feedback](docs/11-supervisor-feedback.md) | Supervisor's comments, decisions and resulting changes; open questions |
+| — | [Diagram sources](docs/diagrams/src/) | Editable draw.io SVG sources of all diagrams (`.drawio.svg`, UML); they render as images on GitHub |
 | — | [Questionnaire for scheduling staff](docs/questionnaire/questions.md) | Survey on the current timetabling process (in Russian) |
 | — | [Articles](docs/articles/) | Full texts of the papers used in the literature review |
 
@@ -72,16 +83,24 @@ Each choice and the alternatives considered are in the [technology comparison](d
 ```
 .
 ├── README.md
-└── docs/
-    ├── 01-proposal.md
-    ├── 02-lit_review.md
-    ├── 03-existing_system_comparison.md
-    ├── 04-technology-comparison.md
-    ├── 05-requirements.md
-    ├── 06-project-management.md
-    ├── questionnaire/
-    └── articles/
+├── docs/
+│   ├── 01-proposal.md
+│   ├── 02-lit_review.md
+│   ├── 03-existing_system_comparison.md
+│   ├── 04-technology-comparison.md
+│   ├── 05-requirements.md
+│   ├── 06-project-management.md
+│   ├── 07-architecture.md
+│   ├── 08-ux-prototype.md
+│   ├── 09-verification-plan.md
+│   ├── 11-supervisor-feedback.md
+│   ├── diagrams/
+│   │   └── src/      # editable draw.io SVG diagrams (.drawio.svg)
+│   ├── questionnaire/
+│   └── articles/
 ```
+
+UX mock-ups are kept in Figma, not in the repository: [AITU Smart Schedule - UX prototype](https://www.figma.com/design/wPqTQwWE7WJQ4iXm5mzazp).
 
 Source code, database migrations, the API contract, deployment files and test data will be added to the repository as development starts.
 
