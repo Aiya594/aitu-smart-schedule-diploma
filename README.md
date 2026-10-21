@@ -104,7 +104,28 @@ UX mock-ups are kept in Figma, not in the repository: [AITU Smart Schedule - UX 
 
 Source code, database migrations, the API contract, deployment files and test data will be added to the repository as development starts.
 
+## Setup, execution and testing
 
+Source code is not available yet; development starts in November 2026. This section will be extended with build, run and test instructions (Docker Compose, Go tests, frontend) as soon as runnable code is added.
+
+At this stage the repository contains documentation only. It lives in the `docs` branch.
+
+### Get the documentation branch
+
+Clone only the `docs` branch:
+
+```bash
+git clone -b docs https://github.com/Aiya594/aitu-smart-schedule-diploma.git
+cd aitu-smart-schedule-diploma
+```
+
+Or, if you already have a clone of the repository:
+
+```bash
+git fetch origin docs
+git switch docs        # or: git checkout -b docs origin/docs
+git pull origin docs   # get the latest changes
+```
 
 ## Project management
 
